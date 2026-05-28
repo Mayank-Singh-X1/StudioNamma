@@ -1,0 +1,593 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.nav {
+    width: 100%;
+    height: 10vh;
+    font-family: Michroma;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 20;
+
+}
+
+.nav1 {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 25%;
+    height: 100%;
+    font-size: 6px;
+}
+
+.nav2 {
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 40%;
+    height: 100%;
+    margin-right: 20%;
+    font-size: 6px;
+}
+
+.nav3 {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 30px;
+    height: 100%;
+    font-size: 6px;
+}
+
+.line {
+    position: relative;
+    display: inline-block;
+}
+
+.line::before {
+    content: '';
+    height: 2%;
+    width: 0%;
+    bottom: 0;
+    background-color: black;
+    position: absolute;
+}
+
+.line:hover::before {
+    width: 100%;
+    transition: all ease 0.5s;
+}
+
+.body1 {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(228, 228, 228);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Open Sans", sans-serif;
+}
+
+.body1 div {
+    transform: scaleY(1.4);
+    margin: -20px;
+    padding: 0;
+    letter-spacing: -7px;
+    font-size: 150px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.body2 {
+    position: absolute;
+    top: -100vh;
+    scale: 0.6;
+    height: 100vh;
+    width: 100%;
+    transform: rotate(-20deg);
+    background-color: rgb(195, 117, 0);
+    transition: all ease 0.7s;
+}
+
+.video-container {
+    pointer-events: none;
+    position: fixed;
+    width: 250px;
+    height: 320px;
+    z-index: 2;
+}
+
+.video-container video {
+    position: absolute;
+    width: 100%;
+    border-radius: 15px;
+    border: none;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.second {
+    position: relative;
+    background-color: rgb(228, 228, 228);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    height: 100vh;
+    width: 100%;
+}
+
+.sec-iframe-container {
+    position: absolute;
+    height: 95%;
+    width: 96%;
+    z-index: 3;
+    display: flex;
+}
+
+.sec-iframe-container iframe {
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Inter:wght@400;500&display=swap');
+
+.third {
+    position: relative;
+    width: 100%;
+    min-height: 120vh;
+    background-color: #EBEBEB;
+    color: #0A0A0A;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px 40px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.third-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.hero-subtitle {
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-weight: 500;
+    top:140px;
+    position:absolute;
+    color: #333;
+}
+
+.hero-title {
+    font-weight: 800;
+    font-family: 'Oswald', sans-serif;
+    font-size: 70px;
+    line-height: 1.005;
+    text-transform: uppercase;
+    margin: 0;
+    transform: scaleY(1.4);
+    letter-spacing: -2px;
+}
+
+.anim-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.underline-detail,
+.underline-playground {
+    border-bottom: 4px solid #0A0A0A;
+}
+
+.fourvid {
+    background-color: rgb(228, 228, 228);
+    padding: 10px;
+    position: relative;
+    height: 185vh;
+    width: 100%;
+    min-height: auto;
+    gap: 20px;
+    vertical-align: top;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    position: relative;
+    border-radius: 20px;
+    height: 90vh;
+    width: 48%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    transition: all ease 0.5s;
+}
+
+.box1::before {
+    background-image: url('https://cdn.prod.website-files.com/67aca0c732855fc2a1f2c4fc/68bb0be00336912e360b324f_main%20case%20cover%20matera%20(1)-p-2000.webp');
+}
+
+.box2::before {
+    background-image: url('https://cdn.prod.website-files.com/67aca0c732855fc2a1f2c4fc/68bae5b9f22246585fe911d0_chance-cover-desktop-p-2000.webp');
+}
+
+.box3::before {
+    background-image: url('https://cdn.prod.website-files.com/67aca0c732855fc2a1f2c4fc/68beb68ead192a24f9ad4372_silvr%20case%20cover%20(1)-p-2000.webp');
+}
+
+.box4::before {
+    background-image: url('https://cdn.prod.website-files.com/67aca0c732855fc2a1f2c4fc/68bb1c497ad001257f2e727f_intramuros-cover-case-home%20(1)-p-2000.webp');
+}
+
+.box:hover::before {
+    filter: blur(15px);
+    transform: scale(1.05);
+}
+
+.box1-vid,
+.box2-vid,
+.box3-vid,
+.box4-vid {
+    z-index: 2;
+    height: 50%;
+    width: 75%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.box1-vid video,
+.box2-vid video,
+.box3-vid video,
+.box4-vid video {
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+
+    background-color: rgba(0, 255, 255, 0.297);
+    background-size: cover;
+    object-fit: cover;
+    object-position: center;
+    display: none;
+
+}
+
+.box1:hover .box1-vid video,
+.box2:hover .box2-vid video,
+.box3:hover .box3-vid video,
+.box4:hover .box4-vid video {
+    display: block;
+    transition: all ease 0.5s;
+}
+
+.services {
+    position: relative;
+    height: 200vh;
+    width: 100%;
+    z-index: 3;
+    background-color: rgb(228, 228, 228);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.heading-container {
+    position: absolute;
+    height: 55%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.heading-container:hover {
+    color: rgba(180, 180, 180, 0.75);
+    transition: all linear 0.2s;
+}
+
+.services .heading {
+    width: 100%;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services .heading p {
+    display: none;
+    font-family: Michroma;
+    font-size: 12px;
+}
+
+.services .heading h1 {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 100px;
+    font-weight: 900;
+    letter-spacing: -6px;
+    margin: -28px;
+    padding: 0;
+    overflow: hidden;
+    transform: scaleY(1.3);
+}
+
+.heading1 p {
+    position: absolute;
+    right: 250px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.heading2 p {
+    position: absolute;
+    right: 400px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.heading3 p {
+    position: absolute;
+    right: 400px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.heading4 p {
+    position: absolute;
+    right: 300px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.heading5 p {
+    position: absolute;
+    right: 180px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.heading6 p {
+    position: absolute;
+    right: 300px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.heading7 p {
+    position: absolute;
+    right: 300px;
+    font-family: "Open Sans", sans-serif;
+}
+
+
+.heading1:hover {
+    color: rgb(0, 0, 0);
+    transition: all ease 0.4s;
+}
+
+.heading2:hover {
+    color: rgb(0, 0, 0);
+    transition: all ease 0.4s;
+}
+
+.heading3:hover {
+    color: rgb(0, 0, 0);
+    transition: all ease 0.4s;
+}
+
+.heading4:hover {
+    color: rgb(0, 0, 0);
+    transition: all ease 0.4s;
+}
+
+.heading5:hover {
+    color: rgb(0, 0, 0);
+    transition: all ease 0.4s;
+}
+
+.heading6:hover {
+    color: rgb(0, 0, 0);
+    transition: all ease 0.4s;
+}
+
+.heading7:hover {
+    color: rgb(0, 0, 0);
+    transition: all ease 0.4s;
+}
+
+.heading1:hover p {
+    display: block;
+    transition: all linear 0.5s;
+}
+
+.heading2:hover p {
+    display: block;
+    transition: all linear 0.5s;
+}
+
+.heading3:hover p {
+    display: block;
+    transition: all linear 0.5s;
+}
+
+.heading4:hover p {
+    display: block;
+    transition: all linear 0.5s;
+}
+
+.heading5:hover p {
+    display: block;
+    transition: all linear 0.5s;
+}
+
+.heading6:hover p {
+    display: block;
+    transition: all linear 0.5s;
+}
+
+.heading7:hover p {
+    display: block;
+    transition: all linear 0.5s;
+}
+
+.headvid {
+    position: absolute;
+    width: 330px;
+    height: 260px;
+    border-radius: 15px;
+    border: none;
+    left: 30px;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.headvid video {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: none;
+    object-fit: cover;
+    object-position: center;
+}
+
+.video1 {
+    top: 280px;
+    display: none;
+
+}
+
+.video2 {
+    top: 380px;
+    display: none;
+}
+
+.video3 {
+    top: 480px;
+    display: none;
+}
+
+.video4 {
+    top: 620px;
+    display: none;
+}
+
+.video5 {
+    top: 720px;
+    display: none;
+}
+
+.video6 {
+    top: 840px;
+    display: none;
+}
+
+.video7 {
+    top: 950px;
+    display: none;
+}
+
+.clients {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    background-color: rgb(228, 228, 228);
+
+}
+
+.clients .seeall {
+    font-family: Michroma;
+    position: absolute;
+    top: 100px;
+    height: 20px;
+    width: 130px;
+}
+
+.bluebox {
+    position: absolute;
+    top: 30px;
+    left: 90px;
+    background-color: blue;
+    color: white;
+    border-radius: 15px;
+    height: 20px;
+    padding: 20px;
+    width: 150px;
+    display: flex;
+    font-weight: 900;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-10deg);
+    visibility: hidden;
+}
+
+
+
+.clients-div {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 5px;
+    gap: 20px;
+
+}
+
+.clients-div svg {
+    height: 80%;
+    width: 18%;
+}

@@ -161,7 +161,7 @@ body::-webkit-scrollbar {
     position: relative;
     width: 100%;
     min-height: 120vh;
-    background-color: #EBEBEB;
+    background-color: #f9f6f6;
     color: #0A0A0A;
     font-family: 'Inter', sans-serif;
     display: flex;
@@ -192,6 +192,7 @@ body::-webkit-scrollbar {
 }
 
 .hero-title {
+    position: relative;
     font-weight: 800;
     font-family: 'Oswald', sans-serif;
     font-size: 70px;
@@ -202,15 +203,30 @@ body::-webkit-scrollbar {
     letter-spacing: -2px;
 }
 
-.anim-underline {
+.underline {
     position: relative;
     display: inline-block;
 }
 
 .underline-detail,
 .underline-playground {
-    border-bottom: 4px solid #0A0A0A;
+    border-bottom: 3px solid #0A0A0A;
+    position: relative;
+
 }
+
+.underline-detail .img {
+    position: absolute;
+    top: -30px;
+    left: 30px;
+    height: 200px;
+    width: 190px;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+}
+
 
 .fourvid {
     background-color: rgb(228, 228, 228);

@@ -1,6 +1,6 @@
 let b2=document.querySelector('.body2')
 let menu=document.querySelector('.menu')
-let video=document.querySelector('.video-container video')
+// let video=document.querySelector('.video-container video')
 let boxes=document.querySelectorAll('.box')
 
 let h1 = document.querySelector('.heading1')
@@ -22,6 +22,11 @@ let v7= document.querySelector('.video7')
 
 let seeall = document.querySelector('.seeall')
 let bluebox = document.querySelector('.bluebox')
+
+const detailHeading = document.querySelector('.underline-detail');
+const images = document.querySelectorAll('.underline-detail .img');
+
+
 
 flag=1
 menu.addEventListener('click', ()=>{
@@ -107,3 +112,31 @@ seeall.addEventListener('mouseout', ()=>{
 
 
 
+let intervalId = null;
+let index = 0;
+
+detailHeading.addEventListener('mouseenter', () => {
+
+    if (intervalId !== null) return;
+
+    intervalId = setInterval(() => {
+        images.forEach(img => {
+            img.style.opacity = 0;
+        });
+
+        images[index].style.opacity = 1;
+        index = (index + 1) % images.length;
+    }, 200);
+});
+
+
+detailHeading.addEventListener('mouseleave', () => {
+    if (intervalId !== null) {
+        clearInterval(intervalId);
+        intervalId = null;
+        
+        images.forEach(img => {
+            img.style.opacity = 0;
+        });
+    }
+});

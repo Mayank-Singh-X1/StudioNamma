@@ -1,6 +1,6 @@
 let b2=document.querySelector('.body2')
 let menu=document.querySelector('.menu')
-// let video=document.querySelector('.video-container video')
+let video=document.querySelector('.video-container video')
 let boxes=document.querySelectorAll('.box')
 
 let h1 = document.querySelector('.heading1')
